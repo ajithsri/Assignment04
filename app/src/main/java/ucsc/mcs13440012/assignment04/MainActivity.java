@@ -33,13 +33,15 @@ public class MainActivity extends ActionBarActivity {
         int secondNumber = Integer.parseInt(((EditText) findViewById(R.id.secondNumber)).getText().toString());
 
         TextView answerText = (TextView) findViewById(R.id.answer);
-        if(button.getText()=="ADD")
+        if(button.getText().equals("ADD"))
         {
-            answerText.setText(firstNumber+secondNumber);
+            int answer= firstNumber+secondNumber;
+            answerText.setText(String.valueOf(answer));
         }
         else
         {
-            answerText.setText(firstNumber-secondNumber);
+            int answer= firstNumber-secondNumber;
+            answerText.setText(String.valueOf(answer));
         }
     }
 
